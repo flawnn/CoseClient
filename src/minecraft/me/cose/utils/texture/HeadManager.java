@@ -101,9 +101,15 @@ public class HeadManager {
 	private BufferedImage get(String name)
 	{
 		BufferedImage image;
+		String link;
 		try
 		{
-			String link = urlMenu.replaceAll("%name%", name);
+			if(name.contains("Player")) {
+			 link = urlMenu.replaceAll("%name%", "OzzkarYT");
+			
+			} else {
+			 link = urlMenu.replaceAll("%name%", name);
+			}
 			URL url = new URL(link);
 			BufferedImage img = null;
 			try {

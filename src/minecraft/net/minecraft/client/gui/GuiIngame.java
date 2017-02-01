@@ -16,6 +16,8 @@ import com.google.common.collect.Lists;
 
 import me.cose.config.Core;
 import me.cose.config.Options;
+import me.cose.gui.info.Renderer;
+import me.cose.gui.info.ShowInfos;
 import me.cose.utils.OverlayEffects;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -124,6 +126,9 @@ public class GuiIngame extends Gui
         int var4 = var2.getScaledHeight();
         this.mc.entityRenderer.setupOverlayRendering();
         GlStateManager.enableBlend();
+        
+        ShowInfos o = new ShowInfos();
+        o.renderClock();
 
         if (Minecraft.isFancyGraphicsEnabled())
         {
@@ -249,10 +254,10 @@ public class GuiIngame extends Gui
 	            	{
 	            		mc.prevKeyBindMuschel = true;
 	            		String message = "";
-	            		String[] antworten = new String[] {"Ja", "Nein", "Vielleicht", "Eher nicht", "Na klar", "Auf jeden Fall", "Warscheinlich", "Sicher doch", "Möglich", "Was denkst du denn?", "Nicht wirklich", "Niemals", "Was hast du denn für Gedanken?!", "Sicherlich nicht", "Ganz bestimmt nicht", "Wie kommst du darauf?", "Überlastet", "Vergiss es!", "Nie im leben", "Frag einfach nochmal!", "Beim nächsten mal vielleicht", "Doofe Frage", "Was geht dich das an?", "Ganz bestimmt"};
+	            		String[] antworten = new String[] {"Ja", "Nein", "Vielleicht", "Eher nicht", "Na klar", "Auf jeden Fall", "Warscheinlich", "Sicher doch", "Mï¿½glich", "Was denkst du denn?", "Nicht wirklich", "Niemals", "Was hast du denn fï¿½r Gedanken?!", "Sicherlich nicht", "Ganz bestimmt nicht", "Wie kommst du darauf?", "ï¿½berlastet", "Vergiss es!", "Nie im leben", "Frag einfach nochmal!", "Beim nï¿½chsten mal vielleicht", "Doofe Frage", "Was geht dich das an?", "Ganz bestimmt"};
 	            		message = antworten[(new Random()).nextInt(antworten.length)];
 	            		try {
-	            			OverlayEffects.achiev("§eMagische Miesmuschel", message, Blocks.command_block ,false, true);
+	            			OverlayEffects.achiev("ï¿½eMagische Miesmuschel", message, Blocks.command_block ,false, true);
 	            		} catch(Exception err) {System.out.println("Error");}
 	            		mc.delayKeyBindMuschel = 20 * 20;
 	            	}
