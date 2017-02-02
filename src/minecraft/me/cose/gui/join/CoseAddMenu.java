@@ -32,7 +32,7 @@ public class CoseAddMenu extends GuiScreen {
 		
 		fieldName = new GuiTextField(0, fontRendererObj, width / 2 - 100, height / 2 - 10, 200, 15);
 		
-		btnAdd = new GuiButton(0, width / 2 + 4, height / 2 + 10, 100, 20, "Hinzufügen");
+		btnAdd = new GuiButton(0, width / 2 + 4, height / 2 + 10, 100, 20, "Hinzufï¿½gen");
 		btnCancel = new GuiButton(1, width / 2 - 100 - 4, height / 2 + 10, 100, 20, "Abbrechen");
 		
 		buttonList.add(btnAdd);
@@ -63,8 +63,8 @@ public class CoseAddMenu extends GuiScreen {
 		
 		fieldName.drawTextBox();
 		
-		drawCenteredString(fontRendererObj, "§lFreundesListe - Nachjoinen", this.width / 2, 10, 0xFFFFFF);
-		drawCenteredString(fontRendererObj, "§7§lSpielername:", width / 2 - 65, height / 2 - 25, 0xFFFFFF);
+		drawCenteredString(fontRendererObj, "ï¿½lFreundesListe - Nachjoinen", this.width / 2, 10, 0xFFFFFF);
+		drawCenteredString(fontRendererObj, "ï¿½7ï¿½lSpielername:", width / 2 - 65, height / 2 - 25, 0xFFFFFF);
 	}
 	
 	protected void actionPerformed(GuiButton button) throws IOException
@@ -78,7 +78,6 @@ public class CoseAddMenu extends GuiScreen {
 				{
 					System.out.println("1");
 					List<String> list = CosePlayerList.getNames();
-					if(!list.contains(name))
 					{
 						System.out.println("2");
 						list.add(name);

@@ -16,8 +16,8 @@ import com.google.common.collect.Lists;
 
 import me.cose.config.Core;
 import me.cose.config.Options;
-import me.cose.gui.info.Renderer;
-import me.cose.gui.info.ShowInfos;
+import me.cose.gui.info.utils.Renderer;
+import me.cose.gui.info.utils.ShowInfos;
 import me.cose.utils.OverlayEffects;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;

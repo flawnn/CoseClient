@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import me.cose.config.Core;
 import me.cose.config.Options;
+import me.cose.gui.info.GuiInfoOptions;
 import net.minecraft.client.gui.achievement.GuiAchievements;
 import net.minecraft.client.gui.achievement.GuiStats;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -13,6 +14,7 @@ public class GuiIngameMenu extends GuiScreen
 {
 	
 	private static boolean isNormal = true;
+	private static boolean isNormal2 = true;
     private int field_146445_a;
     private int field_146444_f;
     private static final String __OBFID = "CL_00000703";
@@ -61,7 +63,7 @@ public class GuiIngameMenu extends GuiScreen
     
     private void buttonStateChange()
     {
-    	btnSwitcher.displayString = isNormal ? "Option Menu" : "Cose Menu";
+    	btnSwitcher.displayString = isNormal2 ? "Option Menu" : "Vanilla Menu";
     	
     	btnReturnToMenu.visible = isNormal;
     	btnReturnToMenu.enabled = isNormal;
@@ -96,7 +98,7 @@ public class GuiIngameMenu extends GuiScreen
             	else
             	{
             		quitAllow = true;
-            		button.displayString = "§c" + I18n.format("menu.disconnect", new Object[0]);;
+            		button.displayString = "ï¿½c" + I18n.format("menu.disconnect", new Object[0]);;
             	}
             case 2:
             case 3:
@@ -121,8 +123,10 @@ public class GuiIngameMenu extends GuiScreen
                 break;
                 
             case 8:
-            	isNormal = !isNormal;
+            	this.mc.displayGuiScreen(new GuiInfoOptions(this));
+            	isNormal2 = false;
             	buttonStateChange();
+            	
             	break;
         }
     }

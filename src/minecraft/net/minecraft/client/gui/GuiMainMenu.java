@@ -274,7 +274,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         
         int nextLength = width - 4;
         linksConnected = Maps.newHashMap();
-        List<BufferedImage> images = Core.head.getMenu();
+        /*List<BufferedImage> images = Core.head.getMenu();
         for(int i = 0; i <= Core.accounts.getMax(); i ++)
         {
         	BufferedImage im = images.get(i);
@@ -301,7 +301,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         GuiButtonExtended btn = new GuiButtonExtended(20, width, height - 24 - 4 - img.getHeight() - 4, img);
         btn.xPosition = width - Math.max(btn.getImage().getWidth(), btn.getImage().getHeight()) - 2;
         buttonList.add(btn);
-        HeadManager.currentMainHead = 0.0;
+        HeadManager.currentMainHead = 0.0; */
         
         buttonList.add(new GuiButton(23, width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, "Nachjoinen"));
 //        this.buttonList.add(this.field_175372_K = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));

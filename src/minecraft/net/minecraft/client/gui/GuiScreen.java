@@ -486,7 +486,7 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
     		try {
     			cmd.processCommand(mc.thePlayer, command.split(" "));
     		} catch(Exception err) {
-    			mc.thePlayer.addChatMessage(new ChatComponentText("§5Youtuber Catcher §8>> §4" + err.getMessage()));
+    			mc.thePlayer.addChatMessage(new ChatComponentText("ï¿½5Youtuber Catcher ï¿½8>> ï¿½4" + err.getMessage()));
     		}
     		ignoreQueque = true;
     	}
